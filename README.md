@@ -1,9 +1,9 @@
-# Remitly Nabha
+# Nabha Remit
 
 A multi-page, front-end clone of a cross-border money transfer website, built with plain **HTML, CSS and vanilla JavaScript** — no frameworks, no build step and no dependencies.
 
 > ### Disclaimer
-> **Remitly Nabha is a fictional brand and this is a non-functional practice project.** It is not a real financial service, holds no licence, cannot move money, and is **not affiliated with, sponsored by or endorsed by any real payments company**. All copy, the logo, the illustrations and every exchange rate, fee, delivery estimate and testimonial on the site are original sample content created for this exercise. Built for learning front-end layout and interaction patterns.
+> **Nabha Remit is a fictional brand and this is a non-functional practice project.** It is not a real financial service, holds no licence, cannot move money, and is **not affiliated with, sponsored by or endorsed by any real payments company**. All copy, the logo, the illustrations and every exchange rate, fee, delivery estimate and testimonial on the site are original sample content created for this exercise. Built for learning front-end layout and interaction patterns.
 
 ## Running it
 

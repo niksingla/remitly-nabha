@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Remitly Nabha — interactions
+   Nabha Remit — interactions
    Everything here runs on sample data. No network calls, no real transfers.
    ========================================================================== */
 (function () {

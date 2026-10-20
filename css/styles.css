@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Remitly Nabha — design system
+   Nabha Remit — design system
    Non-functional demonstration site. All copy and artwork are original.
    ========================================================================== */
 
@@ -581,13 +581,10 @@ pre {
   color: var(--navy-900);
 }
 
-.brand-sub {
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+/* Second half of the wordmark. Inline rather than stacked so the full name
+   stays visible at every screen size. */
+.brand-accent {
   color: var(--blue-600);
-  margin-top: 3px;
 }
 
 .nav {
@@ -2445,6 +2442,10 @@ textarea.input {
   color: #fff;
 }
 
+.footer-brand .brand-accent {
+  color: var(--blue-300);
+}
+
 .footer-brand p {
   margin: 14px 0 18px;
   max-width: 34ch;
@@ -2730,7 +2731,28 @@ textarea.input {
     max-width: 112px;
     font-size: var(--fs-small);
   }
-  .brand-sub {
-    display: none;
+}
+
+/* Smallest phones: the brand and the header actions both refuse to shrink, so
+   tighten the wordmark and buttons rather than let them collide. */
+@media (max-width: 400px) {
+  .header-inner {
+    gap: 10px;
+  }
+  .brand {
+    gap: 8px;
+  }
+  .brand-mark {
+    width: 30px;
+    height: 30px;
+  }
+  .brand-name {
+    font-size: 1rem;
+  }
+  .header-actions {
+    gap: 6px;
+  }
+  .header-actions .btn--sm {
+    padding: 8px 14px;
   }
 }

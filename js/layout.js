@@ -1,21 +1,21 @@
 /* ==========================================================================
-   Remitly Nabha — shared chrome
+   Nabha Remit — shared chrome
    Renders the header and footer into every page so navigation stays in sync.
    ========================================================================== */
 (function () {
   "use strict";
 
-  var SITE_NAME = "Remitly Nabha";
+  var SITE_NAME = "Nabha Remit";
 
   var LOGO = [
     '<svg class="brand-mark" viewBox="0 0 48 48" role="img" aria-label="' + SITE_NAME + ' logo">',
     '  <defs>',
-    '    <linearGradient id="rnMark" x1="0" y1="0" x2="1" y2="1">',
+    '    <linearGradient id="nrMark" x1="0" y1="0" x2="1" y2="1">',
     '      <stop offset="0%" stop-color="#3b6ff5"/>',
     '      <stop offset="100%" stop-color="#11284a"/>',
     '    </linearGradient>',
     '  </defs>',
-    '  <rect width="48" height="48" rx="13" fill="url(#rnMark)"/>',
+    '  <rect width="48" height="48" rx="13" fill="url(#nrMark)"/>',
     '  <path d="M13 31.5 L24 13 L35 31.5" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>',
     '  <path d="M17.5 31.5 h13" fill="none" stroke="#ff6f52" stroke-width="3.4" stroke-linecap="round"/>',
     '</svg>'
@@ -26,8 +26,7 @@
       '<a class="brand" href="' + href + '">' +
       LOGO +
       '<span class="brand-text">' +
-      '<span class="brand-name">Remitly</span>' +
-      '<span class="brand-sub">Nabha</span>' +
+      '<span class="brand-name">Nabha <span class="brand-accent">Remit</span></span>' +
       "</span></a>"
     );
   }
@@ -228,7 +227,7 @@
       cols +
       "</div>" +
       '<div class="footer-bottom">' +
-      '<p class="footer-legal">Remitly Nabha is a fictional brand created as a front-end portfolio exercise. It is not a licensed money transmitter, holds no customer funds, and is not affiliated with or endorsed by any real payments company. Exchange rates, fees, delivery estimates and testimonials shown across this site are illustrative sample data.<br>© 2026 Remitly Nabha — demo project. All rights reserved.</p>' +
+      '<p class="footer-legal">Nabha Remit is a fictional brand created as a front-end portfolio exercise. It is not a licensed money transmitter, holds no customer funds, and is not affiliated with or endorsed by any real payments company. Exchange rates, fees, delivery estimates and testimonials shown across this site are illustrative sample data.<br>© 2026 Nabha Remit — demo project. All rights reserved.</p>' +
       '<ul class="footer-links">' +
       '<li><a href="terms.html">User agreement</a></li>' +
       '<li><a href="privacy.html">Privacy notice</a></li>' +
