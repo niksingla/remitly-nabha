@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remitly Nabha — Send money across borders</title>
+<meta name="description" content="Remitly Nabha is a demo money-transfer experience: send to 140+ destinations, hold a multi-currency balance and pay global teams. A non-functional front-end practice build.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%231b48c4'/%3E%3Cpath d='M13 31.5 L24 13 L35 31.5' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<main id="main">
+
+  <!-- Hero + transfer calculator -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="pill">140+ destinations · 18 languages</span>
+          <h1>Money that keeps up with the people you love</h1>
+          <p class="lede">Send a transfer in under a minute, track it the whole way, and let your family collect it however suits them — bank account, mobile wallet or cash in hand.</p>
+          <div class="btn-row" style="margin-top:26px">
+            <a class="btn btn--coral btn--lg" href="signup.html">Create a free account</a>
+            <a class="btn btn--outline-light btn--lg" href="send-money.html">See how it works</a>
+          </div>
+          <div class="hero-badges">
+            <div class="store-rating">
+              <div>
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <strong>4.8 on Google Play</strong>
+                <span>Sample rating · 1.2M reviews</span>
+              </div>
+            </div>
+            <div class="store-rating">
+              <div>
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <strong>4.9 on the App Store</strong>
+                <span>Sample rating · 3.9M reviews</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc" data-calculator>
+          <div class="calc-tabs" role="tablist" aria-label="Transfer type" data-tabs>
+            <button class="calc-tab" role="tab" id="tab-personal" aria-controls="panel-personal" aria-selected="true" type="button">Personal</button>
+            <button class="calc-tab" role="tab" id="tab-business" aria-controls="panel-business" aria-selected="false" type="button">Business</button>
+          </div>
+
+          <div class="calc-body" role="tabpanel" id="panel-personal" aria-labelledby="tab-personal">
+            <div class="field">
+              <label class="field-label" for="send-amount">You send</label>
+              <div class="money-input">
+                <input id="send-amount" type="text" inputmode="decimal" value="25000" data-send-amount aria-label="Amount you send">
+                <select data-send-currency data-default="INR" aria-label="Currency you send"></select>
+              </div>
+            </div>
+
+            <div class="calc-swap">
+              <span class="rule"></span>
+              <button class="swap-btn" type="button" data-swap aria-label="Swap currencies">⇅</button>
+              <span class="rule"></span>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="receive-amount">They receive</label>
+              <div class="money-input">
+                <input id="receive-amount" type="text" inputmode="decimal" data-receive-amount aria-label="Amount they receive">
+                <select data-receive-currency data-default="USD" aria-label="Currency they receive"></select>
+              </div>
+            </div>
+
+            <div class="field">
+              <span class="field-label">Delivery speed</span>
+              <div class="delivery-options">
+                <label class="delivery-option">
+                  <input type="radio" name="speed" value="express" data-speed checked>
+                  <strong>Express</strong>
+                  <em>Arrives in minutes</em>
+                </label>
+                <label class="delivery-option">
+                  <input type="radio" name="speed" value="economy" data-speed>
+                  <strong>Economy</strong>
+                  <em>Free, 3–5 days</em>
+                </label>
+              </div>
+            </div>
+
+            <div class="calc-summary">
+              <div class="calc-row"><span>Exchange rate</span><span data-out-rate>—</span></div>
+              <div class="calc-row"><span>Transfer fee</span><span data-out-fee>—</span></div>
+              <div class="calc-row"><span>Should arrive</span><span data-out-eta>—</span></div>
+              <div class="calc-row calc-row--total"><span>Total to pay</span><span data-out-total>—</span></div>
+            </div>
+
+            <div class="calc-note">
+              <span aria-hidden="true">🔒</span>
+              <span>Recipient gets <strong data-out-receive>—</strong>. Rates are illustrative sample data for this demo.</span>
+            </div>
+
+            <button class="btn btn--primary btn--block btn--lg" type="button" data-demo-submit>Continue</button>
+          </div>
+
+          <div class="calc-body" role="tabpanel" id="panel-business" aria-labelledby="tab-business" hidden>
+            <div class="notice notice--info" style="margin-bottom:18px">
+              <span>Business pricing depends on volume and payout corridor. Our team puts together a quote within one working day.</span>
+            </div>
+            <div class="field">
+              <label class="lbl" for="biz-volume">Monthly payout volume</label>
+              <select class="input" id="biz-volume">
+                <option>Under ₹5 lakh</option>
+                <option selected>₹5 lakh – ₹50 lakh</option>
+                <option>₹50 lakh – ₹5 crore</option>
+                <option>Over ₹5 crore</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="lbl" for="biz-email">Work email</label>
+              <input class="input" id="biz-email" type="email" placeholder="you@company.com">
+            </div>
+            <a class="btn btn--dark btn--block btn--lg" href="business.html">Explore Nabha Business</a>
+            <p class="fine" style="margin:14px 0 0">Nothing is sent anywhere — this form is part of the demo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live-ish rate ticker -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:14px">
+        <h2 style="font-size:1.1rem;margin:0">Today's indicative rates</h2>
+        <a class="link-arrow" href="rates-fees.html">All rates and fees</a>
+      </div>
+      <div class="rate-ticker" data-rate-ticker></div>
+      <p class="fine" style="margin-top:12px">Sample figures shown for demonstration. Real transfers would lock a rate at the moment you confirm.</p>
+    </div>
+  </section>
+
+  <!-- Value props -->
+  <section class="section section--cream">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Why people stay</span>
+        <h2>Built around the way money actually travels</h2>
+        <p>Three things matter when you are sending money home: it arrives, it arrives fast, and nobody takes a cut you did not agree to.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card card--hover reveal">
+          <div class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+          </div>
+          <h3>Arrives in minutes</h3>
+          <p>Most express transfers land before you have put your phone down. Economy transfers trade speed for a zero fee.</p>
+        </article>
+
+        <article class="card card--hover reveal">
+          <div class="icon-badge icon-badge--mint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 8.2 8 9 4.6-.8 8-4 8-9V6l-8-3z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg>
+          </div>
+          <h3>Priced up front</h3>
+          <p>You see the rate, the fee and the exact amount your recipient collects before you confirm anything. No surprises later.</p>
+        </article>
+
+        <article class="card card--hover reveal">
+          <div class="icon-badge icon-badge--coral">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3c-2.5 2.6-2.5 15.4 0 18M12 3c2.5 2.6 2.5 15.4 0 18"/></svg>
+          </div>
+          <h3>Collected their way</h3>
+          <p>Bank deposit, mobile wallet, home delivery or cash pickup at a nearby agent — your recipient picks what is convenient.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section">
+    <div class="wrap">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">How it works</span>
+          <h2>Four taps from here to their account</h2>
+          <p class="lede" style="margin-bottom:28px">Set your recipient up once. After that, repeat transfers take about twenty seconds.</p>
+          <ol class="steps steps--inline">
+            <li>
+              <h3>Create your account</h3>
+              <p>Sign up with an email or phone number and verify your identity once.</p>
+            </li>
+            <li>
+              <h3>Add a recipient</h3>
+              <p>Enter their bank, wallet or pickup preference. We save it for next time.</p>
+            </li>
+            <li>
+              <h3>Choose amount and speed</h3>
+              <p>Confirm the rate you are quoted and how quickly it should arrive.</p>
+            </li>
+            <li>
+              <h3>Pay and track</h3>
+              <p>Pay by card, bank transfer or UPI, then follow the transfer to delivery.</p>
+            </li>
+          </ol>
+          <a class="btn btn--primary" href="send-money.html" style="margin-top:12px">Walk me through it</a>
+        </div>
+
+        <div class="reveal">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-amount">
+                <div class="sub">To Harpreet · HDFC ••4421</div>
+                <div class="big">₹25,000</div>
+                <div class="sub">They receive $283.12</div>
+              </div>
+              <div class="progress-track"><div class="progress-fill"></div></div>
+              <div class="phone-row"><strong>Paid</strong><span>Today, 10:42</span></div>
+              <div class="phone-row"><strong>Converted</strong><span>Today, 10:43</span></div>
+              <div class="phone-row"><strong>Sent to bank</strong><span>Today, 10:44</span></div>
+              <div class="phone-row"><strong style="color:var(--grey-500)">Deposited</strong><span>Est. 10:51</span></div>
+              <div style="margin-top:18px;padding:13px;border-radius:12px;background:var(--mint-100);color:#0c6f55;font-size:.78rem">
+                Harpreet will get a text the moment the money lands.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Receive money -->
+  <section class="section section--blue">
+    <div class="wrap">
+      <div class="split split--media-first">
+        <div class="reveal">
+          <div class="bank-card">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:1">
+              <span class="brand-name" style="font-size:1.05rem;font-weight:800">Remitly Nabha</span>
+              <span style="font-size:.7rem;letter-spacing:.1em;opacity:.8">MULTI-CURRENCY</span>
+            </div>
+            <div class="chip" style="position:relative;z-index:1"></div>
+            <div style="position:relative;z-index:1">
+              <div class="number">4218&nbsp; 00•• &nbsp;••••&nbsp; 7390</div>
+              <div class="meta" style="margin-top:12px"><span>N. Kaur</span><span>Valid 09/31</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <span class="eyebrow">Receiving money</span>
+          <h2>On the other side of the transfer</h2>
+          <p class="lede">Getting money from abroad should not mean a trip to a branch. Pick where it lands, hold it in the currency you want, and spend it with a card.</p>
+          <ul class="feature-list feature-list--blue" style="margin:24px 0 26px">
+            <li>Collect to a bank account, mobile wallet or agent counter in 130+ countries</li>
+            <li>Hold a balance in 12 currencies and convert when the rate suits you</li>
+            <li>Spend directly with the Nabha Card, online or in person</li>
+            <li>Request a payment with a shareable link if you freelance across borders</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn--dark" href="receive-money.html">How receiving works</a>
+            <a class="link-arrow" href="card.html">Explore the Nabha Card</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">For businesses</span>
+        <h2>Pay your global team without the wire-transfer paperwork</h2>
+        <p>Nabha Business handles contractors, vendors and partners in 170+ countries, with pricing and timelines you can actually plan around.</p>
+      </div>
+
+      <div class="grid grid--4">
+        <article class="card card--flat reveal">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 10h18M7 15h4"/></svg></div>
+          <h3>Batch payouts</h3>
+          <p class="muted">Upload a spreadsheet and send a few hundred payments in one approval.</p>
+        </article>
+        <article class="card card--flat reveal">
+          <div class="icon-badge icon-badge--mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m8 17-5-5 5-5M16 7l5 5-5 5"/></svg></div>
+          <h3>Payouts API</h3>
+          <p class="muted">Drop transfers into your own product with a REST API and webhooks.</p>
+        </article>
+        <article class="card card--flat reveal">
+          <div class="icon-badge icon-badge--coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+          <h3>Spend reporting</h3>
+          <p class="muted">Export reconciled payout data straight into your accounting tools.</p>
+        </article>
+        <article class="card card--flat reveal">
+          <div class="icon-badge icon-badge--amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.4"/><path d="M2.5 20c.6-3.6 3.2-5.6 6.5-5.6s5.9 2 6.5 5.6M17 5.2a3.4 3.4 0 0 1 0 6.3M19.2 20c-.2-1.6-.7-3-1.6-4"/></svg></div>
+          <h3>Named support</h3>
+          <p class="muted">A real person who knows your corridors, not a ticket queue.</p>
+        </article>
+      </div>
+
+      <div class="btn-row" style="margin-top:32px">
+        <a class="btn btn--primary" href="business.html">Explore Nabha Business</a>
+        <a class="link-arrow" href="contact.html">Talk to sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust / stats -->
+  <section class="section section--navy">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Trust and safety</span>
+        <h2>Boring where it counts</h2>
+        <p>Payments are not the place for surprises. Here is what sits underneath every transfer on this demo platform.</p>
+      </div>
+
+      <div class="stats" style="margin-bottom:48px">
+        <div class="stat reveal"><strong>140+</strong><span>Sending and receiving destinations</span></div>
+        <div class="stat reveal"><strong>12</strong><span>Currencies you can hold</span></div>
+        <div class="stat reveal"><strong>18</strong><span>Languages in support</span></div>
+        <div class="stat reveal"><strong>24/7</strong><span>Transfer monitoring</span></div>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card card--navy reveal">
+          <h3>Regulated where we operate</h3>
+          <p>A real platform would hold the licences each market requires, with safeguarded customer funds held separately from company money.</p>
+        </article>
+        <article class="card card--navy reveal">
+          <h3>Layered account security</h3>
+          <p>Device checks, step-up verification on unusual activity and encryption in transit and at rest.</p>
+        </article>
+        <article class="card card--navy reveal">
+          <h3>A delivery promise</h3>
+          <p>If a transfer misses its promised delivery window, the fee comes back — no form to fill in.</p>
+        </article>
+      </div>
+
+      <a class="btn btn--on-dark" href="security.html" style="margin-top:32px">Read about our security</a>
+    </div>
+  </section>
+
+  <!-- App promo -->
+  <section class="section section--cream">
+    <div class="wrap">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">Mobile app</span>
+          <h2>The whole thing fits in your pocket</h2>
+          <p class="lede">Send, track and get notified when money lands. Save recipients, repeat a previous transfer in two taps, and set a rate alert for the number you are waiting on.</p>
+          <div class="app-badges" style="margin:26px 0 18px">
+            <a class="app-badge" href="#" data-demo-action="App store links are inactive in this demo.">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.2 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.7.8-3.4.8s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.3 3 2.3 1.2 0 1.6-.8 3.1-.8s1.8.7 3 .7 2.1-1.1 2.9-2.2c.9-1.3 1.3-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.7zM14.3 5.6c.6-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.1 1.8-1 2.9 1.1.1 2.2-.6 2.8-1.4z"/></svg>
+              <span><span class="small">Download on the</span><span class="big">App Store</span></span>
+            </a>
+            <a class="app-badge" href="#" data-demo-action="App store links are inactive in this demo.">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.4c-.3.3-.5.8-.5 1.4v16.4c0 .6.2 1.1.5 1.4l9-9.6-9-9.6zM14 11l2.9-3.1-10.6-6c-.4-.2-.8-.2-1.1-.1L14 11zM14 13l-8.8 9.2c.3.1.7.1 1.1-.1l10.6-6L14 13zM19.9 10.3l-2.1-1.2L14.7 12l3.1 3 2.1-1.2c1-.6 1-2.9 0-3.5z"/></svg>
+              <span><span class="small">Get it on</span><span class="big">Google Play</span></span>
+            </a>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px">
+            <div class="qr" aria-hidden="true"></div>
+            <p class="fine" style="margin:0;max-width:26ch">Scan with your phone camera to open the download page. Decorative in this demo.</p>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="phone">
+            <div class="phone-screen">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
+                <strong style="font-size:.95rem">Your transfers</strong>
+                <span class="pill pill--mint">3 active</span>
+              </div>
+              <div class="phone-row"><div><strong>Harpreet Kaur</strong><br><span>Bank deposit · USD</span></div><div style="text-align:right"><strong>$283.12</strong><br><span style="color:var(--mint-600)">Arriving</span></div></div>
+              <div class="phone-row"><div><strong>Mira Fernandes</strong><br><span>Wallet · PHP</span></div><div style="text-align:right"><strong>₱8,420</strong><br><span>Delivered</span></div></div>
+              <div class="phone-row"><div><strong>Ahmed Siddiqui</strong><br><span>Cash pickup · AED</span></div><div style="text-align:right"><strong>د.إ1,240</strong><br><span>Ready</span></div></div>
+              <div class="phone-row"><div><strong>Tenzin Sherpa</strong><br><span>Bank deposit · NPR</span></div><div style="text-align:right"><strong>रू41,000</strong><br><span>Delivered</span></div></div>
+              <button class="btn btn--primary btn--block btn--sm" type="button" data-demo-action="Demo screen — nothing to send here." style="margin-top:20px">New transfer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Sample reviews</span>
+        <h2>What people tell us</h2>
+        <p>The quotes below are written for this demo to show how a review section would look.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="quote-card reveal">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <blockquote>I send money to my mother every month and the part I appreciate most is the notification she gets. She no longer calls me to ask if it went through.</blockquote>
+          <div class="who"><span class="avatar">PS</span><div><strong>Priya S.</strong><span>Toronto → Ludhiana</span></div></div>
+        </article>
+        <article class="quote-card reveal">
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <blockquote>The economy option is what sold me. If I plan a few days ahead I pay nothing, and the rate is still better than my bank's counter.</blockquote>
+          <div class="who"><span class="avatar avatar--c2">MF</span><div><strong>Marco F.</strong><span>Milan → Manila</span></div></div>
+        </article>
+        <article class="quote-card reveal">
+          <div class="stars" aria-hidden="true">★★★★☆</div>
+          <blockquote>I pay six contractors across three continents. Doing it as one batch upload saves me most of a morning every fortnight.</blockquote>
+          <div class="who"><span class="avatar avatar--c3">AO</span><div><strong>Ada O.</strong><span>Lagos · Studio owner</span></div></div>
+        </article>
+      </div>
+      <p class="fine center" style="margin-top:24px">Illustrative testimonials created for a portfolio project. They do not describe real customers.</p>
+    </div>
+  </section>
+
+  <!-- Blog teasers -->
+  <section class="section section--grey">
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:36px">
+        <div class="section-head" style="margin:0">
+          <span class="eyebrow">Beyond borders</span>
+          <h2>From the blog</h2>
+          <p>Guides on rates, remittance rules and settling into a new country.</p>
+        </div>
+        <a class="btn btn--ghost" href="blog.html">Read the blog</a>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="post-card reveal">
+          <div class="post-thumb" aria-hidden="true">FX</div>
+          <div class="post-body">
+            <span class="pill pill--grey">Money basics</span>
+            <h3><a href="blog-post.html">What the mid-market rate actually is, and why your bank never gives it to you</a></h3>
+            <p>A plain-language walk through how exchange rates are built and where the margin hides.</p>
+            <div class="post-meta"><span>6 min read</span><span class="dot"></span><span>Oct 2026</span></div>
+          </div>
+        </article>
+        <article class="post-card reveal">
+          <div class="post-thumb post-thumb--2" aria-hidden="true">₹$</div>
+          <div class="post-body">
+            <span class="pill pill--grey">Corridors</span>
+            <h3><a href="blog-post.html">Sending to India in 2026: timing, limits and the paperwork nobody mentions</a></h3>
+            <p>What changes between a bank wire, a wallet top-up and a cash pickup for INR transfers.</p>
+            <div class="post-meta"><span>9 min read</span><span class="dot"></span><span>Sep 2026</span></div>
+          </div>
+        </article>
+        <article class="post-card reveal">
+          <div class="post-thumb post-thumb--3" aria-hidden="true">ID</div>
+          <div class="post-body">
+            <span class="pill pill--grey">Moving abroad</span>
+            <h3><a href="blog-post.html">Your first ninety days in a new country: banking, documents and deposits</a></h3>
+            <p>A checklist for getting paid, paying rent and sending money home when you have just arrived.</p>
+            <div class="post-meta"><span>11 min read</span><span class="dot"></span><span>Sep 2026</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinations -->
+  <section class="section">
+    <div class="wrap" data-country-directory>
+      <div class="section-head reveal">
+        <span class="eyebrow">Where we send</span>
+        <h2>Pick a destination to get started</h2>
+        <p>Search 140+ places we deliver to. Payout options and timings vary by country.</p>
+      </div>
+
+      <div class="search-field" style="max-width:460px;margin-bottom:12px">
+        <label class="lbl" for="home-country-search" style="position:absolute;left:-9999px">Search destinations</label>
+        <input id="home-country-search" type="search" placeholder="Search for a country" data-country-search autocomplete="off">
+      </div>
+      <p class="fine" style="margin-bottom:20px"><span data-country-count></span> available</p>
+
+      <ul class="country-grid" data-country-list></ul>
+      <div class="empty-state" data-country-empty hidden>No destination matches that search. Try a different spelling.</div>
+
+      <a class="link-arrow" href="countries.html" style="margin-top:24px;display:inline-flex">Browse the full directory</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--cream">
+    <div class="wrap wrap--narrow">
+      <div class="section-head center">
+        <span class="eyebrow">Common questions</span>
+        <h2>Getting started with Remitly Nabha</h2>
+      </div>
+
+      <div class="accordion" data-single="true">
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="faq-1">
+            What is Remitly Nabha?
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-panel is-open" id="faq-1">
+            <p>Remitly Nabha is a fictional money-transfer brand built as a front-end practice project. Every page, rate and review you see is sample content made to demonstrate how a cross-border payments site is put together. No accounts exist and no money can be sent.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-2">
+            How long does a transfer take?
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-panel" id="faq-2">
+            <p>In this demo, Express transfers are described as arriving within minutes and Economy transfers within three to five business days. A live service's timings would depend on the destination, the payout method and how quickly your payment clears.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-3">
+            How are fees and rates calculated?
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-panel" id="faq-3">
+            <p>The calculator on this page applies a small sample margin to a hard-coded reference rate, then adds a flat fee on Express transfers below a threshold. It is a stand-in for real pricing logic so the interface has something to display.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-4">
+            Which payment methods can I use?
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-panel" id="faq-4">
+            <p>The interface offers bank transfer, debit card, credit card and UPI as options. Choosing one does nothing in this build — selecting a method simply updates the summary copy.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-5">
+            Can I use this for business payments?
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-panel" id="faq-5">
+            <p>The <a href="business.html">Nabha Business</a> pages show how a payouts product for contractors and vendors would be presented, including batch uploads and an API section. Same caveat applies: it is a mock-up.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="center" style="margin-top:28px">Still looking for something? <a href="help.html">Visit the help centre</a>.</p>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <div>
+          <h2>Ready to look around?</h2>
+          <p>Create a demo account to see the signed-in screens, or jump straight into the transfer flow.</p>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn--on-dark btn--lg" href="signup.html">Sign up</a>
+          <a class="btn btn--outline-light btn--lg" href="send-money.html">Send money</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-site-footer></div>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

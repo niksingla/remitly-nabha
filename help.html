@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help centre — Remitly Nabha</title>
+<meta name="description" content="Search answers about transfers, accounts, payments and security, or find out how to reach support. Demo project.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%231b48c4'/%3E%3Cpath d='M13 31.5 L24 13 L35 31.5' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<main id="main">
+
+  <section class="hero hero--page">
+    <div class="wrap">
+      <div class="hero-simple" style="max-width:720px">
+        <ol class="breadcrumbs" style="color:#9fb0cd">
+          <li><a href="index.html" style="color:#9fb0cd">Home</a></li>
+          <li>Help centre</li>
+        </ol>
+        <h1>How can we help?</h1>
+        <p class="lede">Search the questions below, or jump to a category. Support in this demo is illustrative — there is no live team behind it.</p>
+        <div class="search-field" style="margin-top:26px">
+          <label class="lbl" for="help-search" style="position:absolute;left:-9999px">Search help articles</label>
+          <input id="help-search" type="search" placeholder="Search for an answer — try 'cancel' or 'rate'" data-filter-input autocomplete="off">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Browse</span>
+        <h2>Help categories</h2>
+      </div>
+      <div class="grid grid--3">
+        <a class="help-cat reveal" href="#transfers">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m8 17-5-5 5-5M16 7l5 5-5 5"/></svg></div>
+          <h3>Transfers</h3>
+          <p>Tracking, delivery times, cancelling and fixing recipient details.</p>
+        </a>
+        <a class="help-cat reveal" href="#account">
+          <div class="icon-badge icon-badge--mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c.8-4 3.8-6 7.5-6s6.7 2 7.5 6"/></svg></div>
+          <h3>Account and verification</h3>
+          <p>Signing up, proving your identity, limits and closing an account.</p>
+        </a>
+        <a class="help-cat reveal" href="#payments">
+          <div class="icon-badge icon-badge--coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="2.4"/><path d="M2.5 10.5h19"/></svg></div>
+          <h3>Payments and pricing</h3>
+          <p>Payment methods, fees, exchange rates and refunds.</p>
+        </a>
+        <a class="help-cat reveal" href="#security-faq">
+          <div class="icon-badge icon-badge--amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 8.2 8 9 4.6-.8 8-4 8-9V6l-8-3z"/></svg></div>
+          <h3>Security and fraud</h3>
+          <p>Keeping your account safe and spotting a scam before you send.</p>
+        </a>
+        <a class="help-cat reveal" href="card.html">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6.5" width="18" height="11" rx="2.4"/><path d="M7 14h4"/></svg></div>
+          <h3>Nabha Card</h3>
+          <p>Ordering, activating, freezing and card conversion rules.</p>
+        </a>
+        <a class="help-cat reveal" href="business.html">
+          <div class="icon-badge icon-badge--mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2.2"/><path d="M8.5 8V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v2"/></svg></div>
+          <h3>Business accounts</h3>
+          <p>Batch payouts, approvals, the API and reconciliation exports.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" data-filter-list>
+    <div class="wrap wrap--narrow">
+      <h2 id="transfers">Transfers</h2>
+      <div class="accordion" data-single="true" style="margin-bottom:48px">
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-1">Where is my transfer?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-1"><p>Open the transfer from your activity list to see a timeline with four stages: paid, converted, sent to the payout partner and delivered. If a stage has not moved for longer than its stated window, support can chase the payout partner on your behalf.</p></div>
+        </div>
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-2">Can I cancel a transfer?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-2"><p>Any transfer that has not yet been deposited or collected can be cancelled, and the money returns to the method you paid with. Card refunds typically take three to five business days to appear because the refund has to travel back through the card network.</p></div>
+        </div>
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-3">I entered the wrong recipient details<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-3"><p>Cancel the transfer if it has not been sent on yet, correct the details and send again. If it has already gone to the payout partner, a recall request can be raised — successful recovery depends on whether the receiving bank has credited the account.</p></div>
+        </div>
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-4">Why is my transfer taking longer than promised?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-4"><p>The usual causes are a payment that has not cleared yet, a verification check on an unusual transfer, a bank holiday in the destination country, or a recipient account that cannot accept the credit. The timeline will say which stage is holding things up.</p></div>
+        </div>
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-5">How do I change the payout method after sending?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-5"><p>The payout method is fixed once a transfer is submitted. Cancel and resend with the method you want, as long as the funds have not been collected.</p></div>
+        </div>
+      </div>
+
+      <h2 id="account">Account and verification</h2>
+      <div class="accordion" data-single="true" style="margin-bottom:48px">
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-6">What documents verify my identity?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-6"><p>A current government photo ID — passport, driving licence or national ID card — plus a selfie to match against it. Some transfers also need proof of address dated within the last three months.</p></div>
+        </div>
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-7">Why was my verification rejected?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-7"><p>Most rejections come down to a blurred photo, a cropped edge, an expired document, or a name that does not match the account exactly. Resubmitting a clear, uncropped photo in good light resolves the majority of cases.</p></div>
+        </div>
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-8">How do I raise my sending limit?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-8"><p>Complete identity verification to move to the higher tier. Above that, you supply evidence of where the funds come from — payslips, a sale deed or an investment statement. See <a href="send-money.html">sending limits</a> for the tiers.</p></div>
+        </div>
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-9">Can I change the email on my account?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-9"><p>Yes, from account settings. Changing an email triggers a confirmation to both the old and new address, and sending is paused for a short window as a precaution against account takeover.</p></div>
+        </div>
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-10">How do I close my account?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-10"><p>Withdraw any remaining balance, then request closure from settings. Transaction records are kept for the period local regulation requires even after an account closes.</p></div>
+        </div>
+      </div>
+
+      <h2 id="payments">Payments and pricing</h2>
+      <div class="accordion" data-single="true" style="margin-bottom:48px">
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-11">Which payment methods are accepted?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-11"><p>Bank transfer, UPI, debit card, credit card and your own Nabha balance. Bank transfer and UPI carry no surcharge; cards do. The <a href="rates-fees.html">rates and fees</a> page lists each one.</p></div>
+        </div>
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-12">Why did my card get declined?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-12"><p>Card issuers sometimes block cross-border payment attempts as a fraud precaution, especially on a first transfer. Calling your bank to authorise the merchant usually clears it. Mismatched billing addresses are the other common cause.</p></div>
+        </div>
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-13">How is the exchange rate decided?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-13"><p>A margin is applied to the mid-market rate, and it varies with the delivery speed you choose. The exact rate is shown before you confirm and locked while you complete payment.</p></div>
+        </div>
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-14">When do I get a refund?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-14"><p>Refunds are issued when you cancel before collection, when a deposit bounces back from the receiving bank, or when a cash pickup goes uncollected for 30 days. They return to the original payment method.</p></div>
+        </div>
+      </div>
+
+      <h2 id="security-faq">Security and fraud</h2>
+      <div class="accordion" data-single="true">
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-15">Someone asked me to send them money — is it a scam?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-15"><p>Treat any unexpected request with suspicion, particularly if it is urgent, involves someone you have only met online, or asks you to pay a fee to release a prize, loan or inheritance. Money sent to a stranger and collected is effectively gone. Read our <a href="security.html">fraud guidance</a> before sending.</p></div>
+        </div>
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-16">How do I keep my account secure?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-16"><p>Use a password you have not reused anywhere else, turn on two-factor authentication, and never share a one-time code — nobody legitimate will ever ask for one, including support.</p></div>
+        </div>
+        <div class="accordion-item" data-filter-item>
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="h-17">I think my account has been accessed<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="h-17"><p>Change your password immediately, sign out of all devices from settings, and contact support so any pending transfers can be frozen while the activity is reviewed.</p></div>
+        </div>
+      </div>
+
+      <div class="empty-state" data-filter-empty hidden style="margin-top:24px">
+        <p><strong>No articles match that search.</strong></p>
+        <p style="margin:0">Try a single keyword, or <a href="#contact">contact support</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Still stuck</span>
+        <h2>Ways to reach support</h2>
+        <p>Illustrative contact channels — none of these are monitored in a demo build.</p>
+      </div>
+      <div class="grid grid--3">
+        <article class="card card--flat reveal">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15.5a2 2 0 0 1-2.2 2 18 18 0 0 1-15.3-15.3A2 2 0 0 1 5.5 0h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L9.6 7.9a14.5 14.5 0 0 0 6.5 6.5l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7A2 2 0 0 1 21 15.5z" transform="translate(0 3)"/></svg></div>
+          <h3>Chat in the app</h3>
+          <p class="muted">Fastest route for anything about a specific transfer. Available 24/7 in 18 languages.</p>
+        </article>
+        <article class="card card--flat reveal">
+          <div class="icon-badge icon-badge--mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.4"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg></div>
+          <h3>Email</h3>
+          <p class="muted">Write to <strong>support@remitly-nabha.example</strong> for anything that is not urgent. A demo address.</p>
+        </article>
+        <article class="card card--flat reveal">
+          <div class="icon-badge icon-badge--coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a7 7 0 0 0-7 7v4.5A2.5 2.5 0 0 0 7.5 17H9v-7H7"/><path d="M19 14.5V10a7 7 0 0 0-7-7M15 10h2v7h-1.5A2.5 2.5 0 0 1 13 14.5"/></svg></div>
+          <h3>File a complaint</h3>
+          <p class="muted">Formal complaints get a written acknowledgement within two business days and a decision within fifteen.</p>
+        </article>
+      </div>
+
+      <div class="card" style="max-width:640px;margin:40px auto 0">
+        <h3 style="font-size:1.08rem">Send us a message</h3>
+        <form class="form-grid" data-demo-form="Demo form — your message was not sent." style="margin-top:16px">
+          <div class="form-grid form-grid--2">
+            <div><label class="lbl" for="h-name">Name</label><input class="input" id="h-name" type="text" placeholder="Your name"></div>
+            <div><label class="lbl" for="h-email">Email</label><input class="input" id="h-email" type="email" placeholder="you@example.com"></div>
+          </div>
+          <div>
+            <label class="lbl" for="h-topic">What is this about?</label>
+            <select class="input" id="h-topic">
+              <option>A transfer I have sent</option>
+              <option>My account or verification</option>
+              <option>Payments, fees or refunds</option>
+              <option>Suspected fraud</option>
+              <option>Business accounts</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div><label class="lbl" for="h-msg">Message</label><textarea class="input" id="h-msg" placeholder="Tell us what happened"></textarea></div>
+          <button class="btn btn--primary btn--block" type="submit">Send message</button>
+          <p class="fine" style="margin:0">Please do not enter real personal information — this is a static demonstration page.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-site-footer></div>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

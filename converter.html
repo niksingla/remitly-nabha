@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Currency converter — Remitly Nabha</title>
+<meta name="description" content="Convert between 24 currencies using indicative reference rates, and see the inverse rate at the same time. Demo project.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%231b48c4'/%3E%3Cpath d='M13 31.5 L24 13 L35 31.5' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<main id="main">
+
+  <section class="hero hero--page hero--light">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <ol class="breadcrumbs">
+            <li><a href="index.html">Home</a></li>
+            <li>Currency converter</li>
+          </ol>
+          <h1>Check the rate before you commit to anything</h1>
+          <p class="lede">Knowing the reference rate is the easiest way to judge whether a transfer is good value. Convert any amount below, then compare it against what a provider actually offers you.</p>
+          <div class="btn-row" style="margin-top:24px">
+            <a class="btn btn--primary" href="send-money.html">Price a transfer</a>
+            <a class="btn btn--ghost" href="rates-fees.html">How pricing works</a>
+          </div>
+        </div>
+
+        <div class="card" style="background:#fff" data-converter>
+          <h3 style="font-size:1.05rem">Convert</h3>
+          <div class="field" style="margin-top:16px">
+            <label class="field-label" for="conv-amount">Amount</label>
+            <div class="money-input">
+              <input id="conv-amount" type="text" inputmode="decimal" value="10000" data-conv-amount>
+              <select data-conv-from data-default="INR" aria-label="Convert from"></select>
+            </div>
+          </div>
+
+          <div class="calc-swap">
+            <span class="rule"></span>
+            <button class="swap-btn" type="button" data-conv-swap aria-label="Swap currencies">⇅</button>
+            <span class="rule"></span>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="conv-to">Converted to</label>
+            <select class="input" id="conv-to" data-conv-to data-default="USD"></select>
+          </div>
+
+          <div style="padding:18px;border-radius:14px;background:var(--blue-050);margin-top:8px">
+            <div class="fine" style="margin-bottom:4px">Converted amount</div>
+            <div style="font-size:2rem;font-weight:800;letter-spacing:-.03em;color:var(--navy-900);line-height:1.1" data-conv-result>—</div>
+            <div class="fine" style="margin-top:10px" data-conv-detail>—</div>
+            <div class="fine" data-conv-inverse>—</div>
+          </div>
+
+          <p class="fine" style="margin:14px 0 0">Reference rates stored in this page's JavaScript. Indicative only — not a live market feed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <h2 style="font-size:1.1rem">Popular pairs</h2>
+      <div class="rate-ticker" data-rate-ticker style="margin-top:14px"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">Understanding rates</span>
+          <h2>What the mid-market rate means</h2>
+          <p class="lede">Currencies trade in a two-sided market: one price to buy, a slightly higher price to sell. The midpoint between those two is the mid-market rate — the number you see on a search engine or a financial news site.</p>
+          <p>No consumer provider gives you that exact number, because converting currency costs them something. What varies enormously is how much they add on top. A transparent provider tells you the margin; a less transparent one quotes "our rate" and lets you work it out yourself.</p>
+          <ul class="feature-list" style="margin-top:20px">
+            <li><strong>Mid-market rate</strong> — the market midpoint, no margin added</li>
+            <li><strong>Offered rate</strong> — what you actually convert at, margin included</li>
+            <li><strong>Spread or margin</strong> — the gap between the two, expressed as a percentage</li>
+            <li><strong>Inverse rate</strong> — the same relationship read the other way round</li>
+          </ul>
+        </div>
+
+        <div class="reveal">
+          <div class="card card--cream">
+            <h3 style="font-size:1.05rem">Spotting the margin</h3>
+            <p class="muted" style="font-size:.93rem">Say the mid-market rate is 1 INR = 0.01131 USD and a provider offers you 0.01098.</p>
+            <div class="calc-row"><span>Mid-market</span><span>0.011310</span></div>
+            <div class="calc-row"><span>Offered</span><span>0.010980</span></div>
+            <div class="calc-row"><span>Difference</span><span>0.000330</span></div>
+            <div class="calc-row calc-row--total"><span>Margin</span><span>2.92%</span></div>
+            <p class="muted" style="font-size:.9rem;margin:16px 0 0">On ₹1,00,000 that margin is worth about ₹2,920 — far more than any headline fee. Divide the difference by the mid-market rate to get the percentage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Reference table</span>
+        <h2>One unit of each currency in INR</h2>
+        <p>Sample reference values used throughout this demo.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>Currency</th><th>Code</th><th>1 unit in INR</th><th>1 INR in units</th></tr></thead>
+          <tbody>
+            <tr><td><strong>US dollar</strong></td><td>USD</td><td>88.400</td><td>0.011312</td></tr>
+            <tr><td><strong>Euro</strong></td><td>EUR</td><td>96.087</td><td>0.010407</td></tr>
+            <tr><td><strong>British pound</strong></td><td>GBP</td><td>111.899</td><td>0.008937</td></tr>
+            <tr><td><strong>UAE dirham</strong></td><td>AED</td><td>24.087</td><td>0.041516</td></tr>
+            <tr><td><strong>Canadian dollar</strong></td><td>CAD</td><td>64.526</td><td>0.015498</td></tr>
+            <tr><td><strong>Australian dollar</strong></td><td>AUD</td><td>58.158</td><td>0.017194</td></tr>
+            <tr><td><strong>Singapore dollar</strong></td><td>SGD</td><td>65.970</td><td>0.015158</td></tr>
+            <tr><td><strong>Philippine peso</strong></td><td>PHP</td><td>1.522</td><td>0.657240</td></tr>
+            <tr><td><strong>Pakistani rupee</strong></td><td>PKR</td><td>0.317</td><td>3.150452</td></tr>
+            <tr><td><strong>Bangladeshi taka</strong></td><td>BDT</td><td>0.738</td><td>1.355204</td></tr>
+            <tr><td><strong>Nepalese rupee</strong></td><td>NPR</td><td>0.625</td><td>1.600679</td></tr>
+            <tr><td><strong>Kenyan shilling</strong></td><td>KES</td><td>0.684</td><td>1.462670</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine" style="margin-top:12px">Derived from the sample USD reference values in <code>js/main.js</code>. Not suitable for any real decision.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="section-head center"><h2>Converter questions</h2></div>
+      <div class="accordion" data-single="true">
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="cv-1">Are these rates live?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel is-open" id="cv-1"><p>No. They are fixed values written into the page's JavaScript so the converter has something to calculate with. A production version would call a rates API and refresh every few seconds.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="cv-2">Why does my bank give me a different number?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="cv-2"><p>Banks quote a retail rate that includes their own margin, and branch counters are usually wider than online. The gap between a bank counter rate and the mid-market rate is often two to four percent.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="cv-3">Can I set an alert for a rate?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="cv-3"><p>The app screens on this site describe a rate alert feature that pushes a notification when your target is reached. Like everything else here, it is a mock-up rather than a working feature.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-site-footer></div>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

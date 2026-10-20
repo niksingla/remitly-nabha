@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sitemap — Remitly Nabha</title>
+<meta name="description" content="Every page in the Remitly Nabha demonstration site, in one list.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%231b48c4'/%3E%3Cpath d='M13 31.5 L24 13 L35 31.5' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<main id="main">
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <ol class="breadcrumbs">
+        <li><a href="index.html">Home</a></li>
+        <li>Sitemap</li>
+      </ol>
+      <h1>Sitemap</h1>
+      <p class="lede" style="max-width:60ch">Every page in this build, grouped the way the navigation groups them.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="grid grid--4">
+        <div>
+          <h2 style="font-size:1.05rem">Sending</h2>
+          <ul class="feature-list feature-list--blue" style="margin-top:14px">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="send-money.html">Send money online</a></li>
+            <li><a href="large-transfer.html">Large transfers</a></li>
+            <li><a href="countries.html">Country directory</a></li>
+            <li><a href="rates-fees.html">Rates and fees</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 style="font-size:1.05rem">Receiving</h2>
+          <ul class="feature-list feature-list--blue" style="margin-top:14px">
+            <li><a href="receive-money.html">Receive money</a></li>
+            <li><a href="card.html">Nabha Card</a></li>
+            <li><a href="converter.html">Currency converter</a></li>
+          </ul>
+
+          <h2 style="font-size:1.05rem;margin-top:32px">Business</h2>
+          <ul class="feature-list feature-list--blue" style="margin-top:14px">
+            <li><a href="business.html">Nabha Business</a></li>
+            <li><a href="business.html#payroll">Batch payouts</a></li>
+            <li><a href="business.html#api">Payouts API</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 style="font-size:1.05rem">Company</h2>
+          <ul class="feature-list feature-list--blue" style="margin-top:14px">
+            <li><a href="about.html">About us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="blog-post.html">Sample blog post</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="newsroom.html">Newsroom</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 style="font-size:1.05rem">Support and legal</h2>
+          <ul class="feature-list feature-list--blue" style="margin-top:14px">
+            <li><a href="help.html">Help centre</a></li>
+            <li><a href="security.html">Security and fraud</a></li>
+            <li><a href="terms.html">User agreement</a></li>
+            <li><a href="privacy.html">Privacy notice</a></li>
+            <li><a href="licenses.html">Licences</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="404.html">Page not found</a></li>
+          </ul>
+
+          <h2 style="font-size:1.05rem;margin-top:32px">Account</h2>
+          <ul class="feature-list feature-list--blue" style="margin-top:14px">
+            <li><a href="login.html">Log in</a></li>
+            <li><a href="signup.html">Sign up</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="wrap wrap--narrow">
+      <h2>How this site is built</h2>
+      <div class="table-wrap" style="margin-top:20px">
+        <table class="data">
+          <thead><tr><th>File</th><th>What it does</th></tr></thead>
+          <tbody>
+            <tr><td><strong>css/styles.css</strong></td><td>The whole design system — tokens, components, layout and responsive rules.</td></tr>
+            <tr><td><strong>js/layout.js</strong></td><td>Builds the header, navigation and footer and injects them into every page.</td></tr>
+            <tr><td><strong>js/main.js</strong></td><td>Calculator, converter, tabs, accordions, country search and the demo form guards.</td></tr>
+            <tr><td><strong>*.html</strong></td><td>One file per page, each loading the two scripts above.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine" style="margin-top:14px">No frameworks, no build step and no external requests. Open any HTML file directly in a browser and it works.</p>
+    </div>
+  </section>
+
+</main>
+
+<div data-site-footer></div>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

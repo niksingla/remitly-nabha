@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security and fraud awareness — Remitly Nabha</title>
+<meta name="description" content="How accounts and money are protected, and how to recognise the scams that target people sending money abroad. Demo project.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%231b48c4'/%3E%3Cpath d='M13 31.5 L24 13 L35 31.5' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<main id="main">
+
+  <section class="hero hero--page">
+    <div class="wrap">
+      <div class="hero-simple" style="max-width:740px">
+        <ol class="breadcrumbs" style="color:#9fb0cd">
+          <li><a href="index.html" style="color:#9fb0cd">Home</a></li>
+          <li>Security</li>
+        </ol>
+        <h1>Keeping money and accounts safe</h1>
+        <p class="lede">Two halves to this page. The first describes the protections a payments platform should have in place. The second is the more useful half: how to spot a scam before you send, because a collected transfer cannot be reversed.</p>
+        <div class="btn-row" style="margin-top:26px">
+          <a class="btn btn--coral btn--lg" href="#fraud">Jump to fraud guidance</a>
+          <a class="btn btn--outline-light btn--lg" href="help.html#security-faq">Security FAQs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Platform security</span>
+        <h2>What sits behind an account</h2>
+        <p>The controls described here are the ones a licensed provider would be expected to operate.</p>
+      </div>
+      <div class="grid grid--3">
+        <article class="card card--hover reveal">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10" rx="2.4"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg></div>
+          <h3>Encryption throughout</h3>
+          <p class="muted">Data encrypted in transit with current TLS and at rest in storage, with keys rotated on a schedule and held separately from the data.</p>
+        </article>
+        <article class="card card--hover reveal">
+          <div class="icon-badge icon-badge--mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.6"/><path d="M10.5 18.5h3"/></svg></div>
+          <h3>Two-factor authentication</h3>
+          <p class="muted">A second factor on login and on any sensitive change, with step-up verification when a device or location looks unfamiliar.</p>
+        </article>
+        <article class="card card--hover reveal">
+          <div class="icon-badge icon-badge--coral"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3.5 2"/></svg></div>
+          <h3>Continuous monitoring</h3>
+          <p class="muted">Every transfer scored against patterns associated with fraud and money laundering, with unusual activity held for review rather than auto-approved.</p>
+        </article>
+        <article class="card card--hover reveal">
+          <div class="icon-badge icon-badge--amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 8.2 8 9 4.6-.8 8-4 8-9V6l-8-3z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></div>
+          <h3>Safeguarded funds</h3>
+          <p class="muted">Customer money held in segregated accounts at regulated banks, kept apart from the company's own operating funds.</p>
+        </article>
+        <article class="card card--hover reveal">
+          <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5M19 8v12H5V3h9l5 5z"/><path d="M8.5 13h7M8.5 16.5h4"/></svg></div>
+          <h3>Independent audit</h3>
+          <p class="muted">Annual penetration testing by an external firm, plus regular internal review of access rights and privileged accounts.</p>
+        </article>
+        <article class="card card--hover reveal">
+          <div class="icon-badge icon-badge--mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.4"/><path d="M2.5 20c.6-3.6 3.2-5.6 6.5-5.6s5.9 2 6.5 5.6"/></svg></div>
+          <h3>Least-privilege access</h3>
+          <p class="muted">Staff see only what their role requires, every access to customer data is logged, and nobody can move money alone.</p>
+        </article>
+      </div>
+      <div class="notice" style="margin-top:32px">
+        <div>
+          <strong>Important</strong>
+          Remitly Nabha is a fictional brand and a static demonstration site. It holds no customer funds, is not licensed anywhere and operates none of the controls described above. This page exists to show how a security page is written.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="fraud">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Fraud awareness</span>
+        <h2>Scams that target people sending money</h2>
+        <p>The schemes below are the ones that most reliably separate people from their savings. They are worth recognising even if you never use a service like this.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="card reveal">
+          <span class="pill pill--coral">Very common</span>
+          <h3 style="margin-top:14px">The romance scam</h3>
+          <p class="muted">Someone you have only met online builds a relationship over weeks or months, then hits a crisis — a medical bill, a customs charge, a stranded flight. The request is always urgent and there is always a reason you cannot meet or video call.</p>
+          <p class="fine"><strong>The tell:</strong> a sustained emotional relationship with someone you have never met in person, followed by a request for money.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="pill pill--coral">Very common</span>
+          <h3 style="margin-top:14px">The advance fee</h3>
+          <p class="muted">You have won a prize, been approved for a loan, or inherited from a relative you did not know. To release it, you must first pay a processing fee, a tax or a legal charge. Pay it and a second fee appears.</p>
+          <p class="fine"><strong>The tell:</strong> money you are owed cannot be released until you send money. Legitimate payouts never work this way.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="pill pill--amber">Rising</span>
+          <h3 style="margin-top:14px">The fake rental</h3>
+          <p class="muted">A flat listed well below market rate, a landlord conveniently abroad, and a deposit required today to hold it against other interested tenants. The property is usually real and lifted from another listing.</p>
+          <p class="fine"><strong>The tell:</strong> a deposit requested before any viewing, with pressure created by invented competition.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="pill pill--amber">Rising</span>
+          <h3 style="margin-top:14px">The invoice redirect</h3>
+          <p class="muted">A supplier emails to say their bank details have changed, just before a payment is due. The email looks right because the account it came from has been compromised, or the domain is off by one character.</p>
+          <p class="fine"><strong>The tell:</strong> changed payment details arriving by email. Always confirm on a phone number you already had.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="pill pill--grey">Persistent</span>
+          <h3 style="margin-top:14px">The impersonated official</h3>
+          <p class="muted">A caller claims to be from a tax office, a bank's fraud team, or a police unit. There is a problem with your account and funds must be moved immediately to a "safe" account to protect them.</p>
+          <p class="fine"><strong>The tell:</strong> no genuine authority will ever ask you to transfer money to secure it, or ask for a one-time code.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="pill pill--grey">Persistent</span>
+          <h3 style="margin-top:14px">The family emergency</h3>
+          <p class="muted">A message from a relative's hacked account, or from an unfamiliar number claiming to be them with a new phone. They are in trouble, cannot talk, and need money now.</p>
+          <p class="fine"><strong>The tell:</strong> urgency combined with an inability to speak. Hang up and call the number you already have for them.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">One question</span>
+          <h2>The question that breaks most scams</h2>
+          <p class="lede">Before sending money to anyone, ask yourself: <strong>would I still be comfortable with this if I waited twenty-four hours?</strong></p>
+          <p>Almost every scam depends on urgency, because urgency prevents you from checking. A genuine landlord will let you view a flat. A genuine supplier will take a phone call. A real relative will be reachable on the number you already have. Nobody with a legitimate claim on your money loses anything if you take a day to verify it.</p>
+          <p>If a delay would supposedly cause disaster — the flat goes to someone else, the prize expires, the account is seized tonight — that pressure is the product being sold to you.</p>
+        </div>
+        <div class="reveal">
+          <div class="card card--navy">
+            <h3>We will never ask you to</h3>
+            <ul class="feature-list" style="margin-top:16px">
+              <li style="color:#c2cde0">Share a one-time passcode with anyone, including support staff</li>
+              <li style="color:#c2cde0">Tell us your full password over chat, email or a phone call</li>
+              <li style="color:#c2cde0">Install remote access software so somebody can "help" you</li>
+              <li style="color:#c2cde0">Move your money to a different account to keep it safe</li>
+              <li style="color:#c2cde0">Pay a fee to release a transfer that is already on its way</li>
+            </ul>
+            <p class="fine" style="color:#8295b3;margin:16px 0 0">Any contact asking for one of these is fraudulent, regardless of how convincing the caller ID, email address or website looks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">If it has already happened</span>
+        <h2>What to do after sending money to a scam</h2>
+      </div>
+      <ol class="steps steps--3">
+        <li class="reveal">
+          <h3>Act in the first hour</h3>
+          <p>Contact the provider immediately. If the transfer has not been collected or deposited, it can usually be stopped outright.</p>
+        </li>
+        <li class="reveal">
+          <h3>Tell your bank</h3>
+          <p>If you paid by card or bank transfer, your bank may be able to attempt a recall and will flag the receiving details.</p>
+        </li>
+        <li class="reveal">
+          <h3>Report it</h3>
+          <p>File a report with your local police or national fraud reporting service. Reports are what get receiving accounts closed.</p>
+        </li>
+        <li class="reveal">
+          <h3>Keep everything</h3>
+          <p>Save messages, profiles, phone numbers and account details. Do not delete the conversation, however uncomfortable it is.</p>
+        </li>
+        <li class="reveal">
+          <h3>Secure your accounts</h3>
+          <p>Change passwords, enable two-factor authentication and sign out of all devices in case details were harvested too.</p>
+        </li>
+        <li class="reveal">
+          <h3>Expect a second approach</h3>
+          <p>Victims are frequently contacted again by someone offering to recover the money for a fee. That is the same scam, round two.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="section-head center"><h2>Security questions</h2></div>
+      <div class="accordion" data-single="true">
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="s-1">Can a transfer be reversed once collected?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel is-open" id="s-1"><p>Generally no. Once cash has been handed over at a counter or credited to a recipient's account, the money is gone in practical terms. This is exactly why scammers favour transfer services, and why the twenty-four hour question matters so much.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="s-2">How do I check a message is really from you?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="s-2"><p>Do not use links or numbers inside the message. Open the app or type the website address yourself, and check whether the same notification appears there. Genuine messages are always mirrored in your account.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="s-3">Should I use a password manager?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="s-3"><p>Yes. Reused passwords are the single most common route into financial accounts, because a breach at an unrelated website hands attackers a working login. A manager removes the need to remember anything.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="s-4">How do I report a vulnerability?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="s-4"><p>A real service would publish a responsible disclosure policy and a dedicated security address, commit to acknowledging reports within a set window, and agree not to pursue researchers acting in good faith.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-site-footer></div>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Send money online — Remitly Nabha</title>
+<meta name="description" content="Send money to bank accounts, mobile wallets and cash pickup points in 140+ destinations. A demo of the Remitly Nabha transfer flow.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%231b48c4'/%3E%3Cpath d='M13 31.5 L24 13 L35 31.5' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<main id="main">
+
+  <section class="hero hero--page">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <ol class="breadcrumbs" style="color:#9fb0cd">
+            <li><a href="index.html" style="color:#9fb0cd">Home</a></li>
+            <li>Send money</li>
+          </ol>
+          <h1>Send money the way your family wants to receive it</h1>
+          <p class="lede">Four payout methods, two speeds and a price you see before you commit. Set a recipient up once and every transfer after that takes about twenty seconds.</p>
+          <ul class="feature-list" style="margin-top:26px;color:#cdd9ee">
+            <li style="color:#cdd9ee">Bank deposit, mobile wallet, cash pickup or home delivery</li>
+            <li style="color:#cdd9ee">Express in minutes, or Economy with no transfer fee</li>
+            <li style="color:#cdd9ee">Live tracking and a text to your recipient on delivery</li>
+          </ul>
+        </div>
+
+        <div class="calc" data-calculator>
+          <div class="calc-body">
+            <div class="field">
+              <label class="field-label" for="sm-send">You send</label>
+              <div class="money-input">
+                <input id="sm-send" type="text" inputmode="decimal" value="50000" data-send-amount>
+                <select data-send-currency data-default="INR" aria-label="Currency you send"></select>
+              </div>
+            </div>
+
+            <div class="calc-swap">
+              <span class="rule"></span>
+              <button class="swap-btn" type="button" data-swap aria-label="Swap currencies">⇅</button>
+              <span class="rule"></span>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="sm-receive">They receive</label>
+              <div class="money-input">
+                <input id="sm-receive" type="text" inputmode="decimal" data-receive-amount>
+                <select data-receive-currency data-default="AED" aria-label="Currency they receive"></select>
+              </div>
+            </div>
+
+            <div class="field">
+              <span class="field-label">Delivery speed</span>
+              <div class="delivery-options">
+                <label class="delivery-option">
+                  <input type="radio" name="sm-speed" value="express" data-speed checked>
+                  <strong>Express</strong><em>Arrives in minutes</em>
+                </label>
+                <label class="delivery-option">
+                  <input type="radio" name="sm-speed" value="economy" data-speed>
+                  <strong>Economy</strong><em>Free, 3–5 days</em>
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-label" for="sm-method">Payout method</label>
+              <select class="input" id="sm-method">
+                <option>Bank deposit</option>
+                <option>Mobile wallet</option>
+                <option>Cash pickup</option>
+                <option>Home delivery</option>
+              </select>
+            </div>
+
+            <div class="calc-summary">
+              <div class="calc-row"><span>Exchange rate</span><span data-out-rate>—</span></div>
+              <div class="calc-row"><span>Transfer fee</span><span data-out-fee>—</span></div>
+              <div class="calc-row"><span>Should arrive</span><span data-out-eta>—</span></div>
+              <div class="calc-row calc-row--total"><span>Total to pay</span><span data-out-total>—</span></div>
+            </div>
+
+            <div class="calc-note"><span aria-hidden="true">🔒</span><span>Recipient gets <strong data-out-receive>—</strong>. Sample rates for demonstration.</span></div>
+            <button class="btn btn--primary btn--block btn--lg" type="button" data-demo-submit>Continue to recipient</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payout methods as tabs -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Payout methods</span>
+        <h2>Four ways for money to land</h2>
+        <p>Availability depends on the destination. The directory lists what each country supports.</p>
+      </div>
+
+      <div data-tabs>
+        <div class="tabs" role="tablist" aria-label="Payout methods">
+          <button class="tab" role="tab" id="t-bank" aria-controls="p-bank" aria-selected="true" type="button">Bank deposit</button>
+          <button class="tab" role="tab" id="t-wallet" aria-controls="p-wallet" aria-selected="false" type="button">Mobile wallet</button>
+          <button class="tab" role="tab" id="t-cash" aria-controls="p-cash" aria-selected="false" type="button">Cash pickup</button>
+          <button class="tab" role="tab" id="t-home" aria-controls="p-home" aria-selected="false" type="button">Home delivery</button>
+        </div>
+
+        <div class="tabpanel" role="tabpanel" id="p-bank" aria-labelledby="t-bank">
+          <div class="split">
+            <div>
+              <h3>Straight into their account</h3>
+              <p class="lede">The most common choice. You add the account number and routing details once, and we keep them for future transfers.</p>
+              <ul class="feature-list">
+                <li>Available in 130+ destinations</li>
+                <li>Express lands in minutes on most corridors, same day on the rest</li>
+                <li>No limit on how many recipients you save</li>
+                <li>Account details are masked after you save them</li>
+              </ul>
+            </div>
+            <div class="card card--cream">
+              <h4>What you will need</h4>
+              <p class="muted" style="font-size:.9rem">Recipient's full name as it appears on the account, the account number, and one of: IFSC code, SWIFT/BIC, IBAN, sort code or routing number — depending on the country.</p>
+              <table class="data" style="min-width:0;font-size:.85rem;margin-top:8px">
+                <tbody>
+                  <tr><td>India</td><td><strong>IFSC + account no.</strong></td></tr>
+                  <tr><td>Eurozone</td><td><strong>IBAN</strong></td></tr>
+                  <tr><td>United Kingdom</td><td><strong>Sort code + account no.</strong></td></tr>
+                  <tr><td>United States</td><td><strong>Routing + account no.</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabpanel" role="tabpanel" id="p-wallet" aria-labelledby="t-wallet" hidden>
+          <div class="split">
+            <div>
+              <h3>To the wallet on their phone</h3>
+              <p class="lede">For recipients who do their day-to-day spending from a mobile wallet rather than a bank account.</p>
+              <ul class="feature-list">
+                <li>Only the recipient's registered mobile number is needed</li>
+                <li>Funds usually show up within a minute or two</li>
+                <li>Works in markets where wallets are the primary account</li>
+                <li>Recipient gets a wallet notification plus our own text</li>
+              </ul>
+            </div>
+            <div class="card card--cream">
+              <h4>Popular wallet corridors</h4>
+              <ul class="feature-list" style="margin-top:12px">
+                <li>Philippines · Kenya · Ghana</li>
+                <li>Pakistan · Bangladesh · Nepal</li>
+                <li>Indonesia · Vietnam · Tanzania</li>
+              </ul>
+              <p class="fine" style="margin-top:14px">Sample list for this demo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabpanel" role="tabpanel" id="p-cash" aria-labelledby="t-cash" hidden>
+          <div class="split">
+            <div>
+              <h3>Cash over a counter</h3>
+              <p class="lede">Useful when your recipient does not hold an account, or when they simply need notes in hand today.</p>
+              <ul class="feature-list">
+                <li>Collected at partner agent locations and participating banks</li>
+                <li>Usually ready to collect within minutes of you paying</li>
+                <li>Recipient brings photo ID and the reference number we text them</li>
+                <li>Uncollected transfers are refunded automatically after 30 days</li>
+              </ul>
+            </div>
+            <div class="card card--cream">
+              <h4>At the counter</h4>
+              <ol style="font-size:.92rem;color:var(--grey-700)">
+                <li>They receive a reference number by text.</li>
+                <li>They show it with a government photo ID.</li>
+                <li>The agent hands over the full amount — no deduction.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="tabpanel" role="tabpanel" id="p-home" aria-labelledby="t-home" hidden>
+          <div class="split">
+            <div>
+              <h3>Delivered to the door</h3>
+              <p class="lede">Available on a small number of corridors where a courier brings cash to the recipient's address.</p>
+              <ul class="feature-list">
+                <li>Scheduled within a delivery window you pick</li>
+                <li>Courier verifies ID before handing over funds</li>
+                <li>Helpful for recipients with limited mobility</li>
+                <li>Carries a higher fee than counter collection</li>
+              </ul>
+            </div>
+            <div class="card card--cream">
+              <h4>Where it is offered</h4>
+              <p class="muted" style="font-size:.9rem">In this demo, home delivery is shown as available on a handful of South Asian and West African corridors. Check the country directory for the method list per destination.</p>
+              <a class="link-arrow" href="countries.html">Open the directory</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Steps -->
+  <section class="section section--cream">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">The flow</span>
+        <h2>What sending actually looks like</h2>
+      </div>
+      <ol class="steps steps--3">
+        <li class="reveal">
+          <h3>1. Tell us the amount</h3>
+          <p>Enter what you want to send or what they should receive, and we work backwards from whichever you typed.</p>
+        </li>
+        <li class="reveal">
+          <h3>2. Add the recipient</h3>
+          <p>Their name, payout method and details. Saved recipients appear as a one-tap list next time.</p>
+        </li>
+        <li class="reveal">
+          <h3>3. Pick a speed</h3>
+          <p>Express for minutes, Economy for free. The quoted rate is held while you finish paying.</p>
+        </li>
+        <li class="reveal">
+          <h3>4. Pay</h3>
+          <p>Bank transfer, UPI, debit or credit card. Card payments clear fastest; bank transfers cost least.</p>
+        </li>
+        <li class="reveal">
+          <h3>5. Track it</h3>
+          <p>A status timeline shows paid, converted, sent and delivered, with push updates at each stage.</p>
+        </li>
+        <li class="reveal">
+          <h3>6. They collect</h3>
+          <p>Money lands in their account or wallet, or they collect cash with the reference we text them.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Payment methods -->
+  <section class="section">
+    <div class="wrap">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">Paying us</span>
+          <h2>How you fund a transfer</h2>
+          <p class="lede">Each method trades cost against speed. The calculator updates the total as soon as you switch.</p>
+          <div class="table-wrap" style="margin-top:24px">
+            <table class="data">
+              <thead><tr><th>Method</th><th>Clears in</th><th>Cost</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Bank transfer / UPI</strong></td><td>Minutes to 1 day</td><td>Lowest</td></tr>
+                <tr><td><strong>Debit card</strong></td><td>Instant</td><td>Small surcharge</td></tr>
+                <tr><td><strong>Credit card</strong></td><td>Instant</td><td>Highest surcharge</td></tr>
+                <tr><td><strong>Nabha balance</strong></td><td>Instant</td><td>Free</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="fine" style="margin-top:12px">Illustrative figures. Card issuers may treat a transfer as a cash advance.</p>
+        </div>
+
+        <div class="reveal">
+          <span class="eyebrow">Limits</span>
+          <h2>Sending limits</h2>
+          <p class="lede">Limits exist to keep accounts safe and to satisfy the rules a licensed operator works under.</p>
+          <div class="table-wrap" style="margin-top:24px">
+            <table class="data">
+              <thead><tr><th>Tier</th><th>Per transfer</th><th>Per 30 days</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Email verified</strong></td><td>₹50,000</td><td>₹2,00,000</td></tr>
+                <tr><td><strong>ID verified</strong></td><td>₹5,00,000</td><td>₹25,00,000</td></tr>
+                <tr><td><strong>Source of funds</strong></td><td>On request</td><td>On request</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="fine" style="margin-top:12px">Sample tiers for this demo. <a href="large-transfer.html">Large transfers</a> are handled separately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--grey">
+    <div class="wrap wrap--narrow">
+      <div class="section-head center"><h2>Questions about sending</h2></div>
+      <div class="accordion" data-single="true">
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="sm-faq-1">Can I cancel a transfer after paying?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel is-open" id="sm-faq-1"><p>A real service would let you cancel any transfer that has not yet been collected or deposited, with funds returned to your original payment method. Once money has reached the recipient it cannot be pulled back.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="sm-faq-2">What if I entered the wrong account number?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="sm-faq-2"><p>Most failed deposits bounce back automatically within a few business days and get credited to your balance. If the details matched a valid but unintended account, recovery depends on the receiving bank.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="sm-faq-3">Does the recipient pay anything?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="sm-faq-3"><p>No. The amount shown as "they receive" is what they collect. Some receiving banks apply their own inbound charge, which is outside any sender's control.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="sm-faq-4">Why is my first transfer taking longer?<span class="accordion-icon" aria-hidden="true"></span></button>
+          <div class="accordion-panel" id="sm-faq-4"><p>First transfers often include an extra verification step. After that, the same recipient and payment method usually clears at the normal speed.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="cta-band">
+        <div><h2>Send your first transfer</h2><p>It takes a couple of minutes to set up an account and add a recipient.</p></div>
+        <div class="btn-row">
+          <a class="btn btn--on-dark btn--lg" href="signup.html">Get started</a>
+          <a class="btn btn--outline-light btn--lg" href="rates-fees.html">Check rates</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-site-footer></div>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

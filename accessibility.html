@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accessibility — Remitly Nabha</title>
+<meta name="description" content="How this demonstration site approaches accessibility, what has been implemented, and where the known gaps are.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='13' fill='%231b48c4'/%3E%3Cpath d='M13 31.5 L24 13 L35 31.5' fill='none' stroke='%23fff' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div data-site-header></div>
+
+<main id="main">
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <ol class="breadcrumbs">
+        <li><a href="index.html">Home</a></li>
+        <li>Accessibility</li>
+      </ol>
+      <h1>Accessibility</h1>
+      <p class="lede" style="max-width:64ch">A payments site that only works for some people is a broken payments site. Here is what this build does, and an honest list of what it does not.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap wrap--narrow">
+      <div class="prose">
+        <h2>Our aim</h2>
+        <p>This project targets the WCAG 2.2 Level AA success criteria. It is a practice build rather than an audited product, so treat the list below as a statement of intent backed by implementation, not a certified conformance claim.</p>
+
+        <h2>What has been implemented</h2>
+        <ul>
+          <li><strong>Semantic structure</strong> — one <code>&lt;h1&gt;</code> per page, headings in order without skipped levels, and landmark elements for the header, navigation, main content and footer.</li>
+          <li><strong>Keyboard access</strong> — every interactive control is reachable and operable by keyboard. Navigation menus close on <kbd>Escape</kbd>, tab lists respond to arrow keys, and focus is never trapped.</li>
+          <li><strong>Visible focus</strong> — a high-contrast focus ring is applied through <code>:focus-visible</code> and is never removed.</li>
+          <li><strong>Skip link</strong> — the first tab stop on each page jumps straight to the main content.</li>
+          <li><strong>ARIA where it is needed</strong> — accordions, tab panels and dropdown menus expose correct <code>aria-expanded</code>, <code>aria-controls</code> and <code>aria-selected</code> state, and no further.</li>
+          <li><strong>Labelled form fields</strong> — every input has an associated label, with visually hidden labels used where the design calls for no visible text.</li>
+          <li><strong>Colour contrast</strong> — body text and interactive controls meet the 4.5:1 ratio against their backgrounds; large headings meet 3:1.</li>
+          <li><strong>Colour is never the only signal</strong> — status is always carried by text as well as colour.</li>
+          <li><strong>Decorative images hidden</strong> — the illustrative phone, card and thumbnail graphics are marked <code>aria-hidden</code> so they are not announced.</li>
+          <li><strong>Reduced motion respected</strong> — all transitions and scroll reveals are disabled under <code>prefers-reduced-motion</code>.</li>
+          <li><strong>Zoom and reflow</strong> — layouts reflow to 320 pixels wide and survive 200% text zoom without clipping or horizontal scrolling.</li>
+          <li><strong>Relative units</strong> — type is sized in <code>rem</code> so it scales with the browser's base font size.</li>
+        </ul>
+
+        <h2>Known gaps</h2>
+        <p>Being specific about failures is more useful than a blanket claim of compliance:</p>
+        <ul>
+          <li>The site has not been tested end to end with screen readers. Components follow established ARIA patterns, but that is not a substitute for testing with VoiceOver, NVDA and JAWS.</li>
+          <li>There is no automated accessibility test suite in the project, so regressions would not be caught.</li>
+          <li>Wide data tables scroll horizontally on small screens. This is announced to assistive technology but is still awkward to navigate.</li>
+          <li>Form validation messaging is not implemented, because the forms are deliberately inert. A real build would need inline errors tied to fields with <code>aria-describedby</code> and an error summary.</li>
+          <li>The site is English only. A genuine service operating in eighteen languages would need full localisation including right-to-left layout support.</li>
+          <li>Contrast has been checked by eye and by ratio calculation rather than with a tooling pass across every state and component combination.</li>
+        </ul>
+
+        <h2>Testing this yourself</h2>
+        <p>If you want to check the claims above, these are quick to try:</p>
+        <ol>
+          <li>Press <kbd>Tab</kbd> from the top of any page. The skip link should appear first, and every control should show a focus ring as you move through.</li>
+          <li>Open a navigation menu with <kbd>Enter</kbd>, then press <kbd>Escape</kbd>. It should close and return focus sensibly.</li>
+          <li>Set your browser zoom to 200%. Nothing should be clipped or require sideways scrolling.</li>
+          <li>Narrow the window to around 320 pixels. The layout should stack rather than overflow.</li>
+          <li>Turn on "reduce motion" in your operating system and reload. Animations should not play.</li>
+        </ol>
+
+        <h2>Feedback</h2>
+        <p>On a real site this section would give a monitored address for accessibility problems, commit to a response time, and offer an alternative route to complete any task that could not be made accessible. As this is a static demonstration, the <a href="contact.html">contact page</a> addresses are placeholders and nothing sent to them is received.</p>
+
+        <div class="notice notice--info" style="margin-top:32px">
+          <div>
+            <strong>Why this page exists at all</strong>
+            Accessibility statements are a legal requirement for many organisations and a good idea for the rest. Including one here demonstrates the full shape of a production website — and writing down the gaps is a more useful exercise than claiming there are none.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-site-footer></div>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
