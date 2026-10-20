@@ -1282,6 +1282,10 @@ pre {
   gap: 24px;
 }
 
+.stats--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .stat {
   padding: 4px 0;
 }
@@ -2719,6 +2723,9 @@ textarea.input {
 @media (max-width: 520px) {
   .grid--3,
   .grid--4 {
+    grid-template-columns: 1fr;
+  }
+  .stats--3 {
     grid-template-columns: 1fr;
   }
   .form-grid--2 {
